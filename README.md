@@ -48,12 +48,11 @@ PWM_IP_Core/
 │   └── macroInterfaceAvalon.do  # ModelSim simulation macro
 ├── constraints/
 │   └── pwm.sdc                  # Timing constraints (25 MHz clock)
-├── software/
-│   ├── pwm_regs.h               # Register access macros
-│   ├── pwmAPI.h                 # C API header
-│   └── pwmAPI.c                 # C API implementation
-└── synt/
-    └── pwm.qpf                  # Quartus project file
+└── software/
+    ├── pwm_regs.h               # Register access macros
+    ├── pwmAPI.h                 # C API header
+    └── pwmAPI.c                 # C API implementation
+
 ```
 
 ---
@@ -91,14 +90,6 @@ PWM_IP_Core/
 4. Execute the macro: `Tools > Tcl > Execute Macro > macroInterfaceAvalon.do`
 5. There are several marco available. You just have to choose the one describing best what you want to simulate.
 
----
-
-## How to Synthesize
-
-1. Open Quartus Prime and create a new project targeting `5CSEMA4U23C6`
-2. Add `rtl/pwm.vhd` as top-level source
-3. Import `constraints/pwm.sdc` for timing constraints
-4. Run Analysis & Synthesis, then Full Compilation
 
 ---
 
